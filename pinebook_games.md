@@ -30,35 +30,9 @@ cd xonotic
 
 ## OpenArena
 
-Download the zip-file (full version 0.8.8) [download](http://www.openarena.ws/download.php?list.61)
+There was no package for an installation in aarch64. So I made them.
+Just enable UAR in pamac-manager
 
-unzip it.
+You can now install libxmp-aarch64-git and openarena-git and you are done!
 
-### compile libxmp
-
-We need libxmp, so compile/make it.
-
-[github libxmp](https://github.com/cmatsuoka/libxmp)
-
-```bash
-git clone git@github.com:cmatsuoka/libxmp.git
-cd libxmp
-autoconf
-# we use not the default (old) prefix, not working in manjaro
-./configure --prefix=/usr
-make
-sudo make install
-```
-
-### compile openarena
-
-We need to add aarch64 as a platform, I have made a pull request for that: [github pull-request](https://github.com/OpenArena/engine/pull/64).
-If my pull-request is not yet accepted, you will have to add 2 line (see pull-request).
-
-```bash
-git clone git@github.com:OpenArena/engine.git
-cd engine
-make
-```
-
-The release (compiled-files) will by in `build/release-linux-aarch64/` copy oa_ded.aarch64 and openarena.aarch64 to the unzipped folder. Now you can play OpenArena!
+Look in your menu, you will find OpenArena!
